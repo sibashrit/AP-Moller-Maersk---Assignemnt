@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.application {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+.application_header {
+    text-align: center;
+    padding-bottom: 15px;
+}
+.application_body {
+    background-color: #D3D3D3;
+    border-top: 4px solid #999;
+    padding-bottom: 40px;
+}
+.application_body-container {
+    display: flex;
+    justify-content: space-between;
+}
+.application_body-left #root {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 360px;
+}
+.application_body-left #root .content {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font-size: 36px;
+    box-sizing: border-box;
+}
+.application_body-right {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.application_body-right button {
+    margin: 10px;
+    background-color: #2B8EAD;
+    color: #FFF;
+    padding: 10px 20px;
+    min-width: 150px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 4px 4px #000;
+}
+.application_body-right button:hover {
+    cursor: pointer;
+}
+.application_body-bottom {
+    font-style: italic;
+    text-align: center;
+    padding-top: 15px;
+}
+
+@media only screen and (max-width: 959px) {
+    .application {
+        height: auto;
+    }
+    .application_header {
+        padding: 20px;
+        color: #FFF;
+        font-size: 20px;
+        background-color: #333333;
+        width: 100%;
+    }
+    .application_body {
+        background: none;
+        border-top: none;
+    }
+    .application_body-container {
+        flex-direction: column-reverse;
+    }
+    .application_body-right {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .application_body-left #root {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .application_body-left #root .content {
+        width: 100%;
+        height: auto;
+        padding: 10px 0;
+        margin: 5px;
+        color: #000;
+        background-color: #D3D3D3 !important;
+    }
+}
