@@ -37,7 +37,7 @@
         document.getElementById('root').innerHTML = htmlContent;
     }
 
-    randomizeArray();
+    fillScreen(data.numbers);
 
     document.getElementById('button-shuffle').addEventListener('click', randomizeArray);
     document.getElementById('button-sort').addEventListener('click', sortArray);
